@@ -26,7 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-#Syberia 
+#Syberia
 PRODUCT_GENERIC_PROPERTIES += \
 	ro.sf.lcd_density=420 \
 
@@ -36,6 +36,21 @@ TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+
+#QTI performance
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
+
+#QTI Performance
+PRODUCT_GENERIC_PROPERTIES += \
+    vendor.enable_prefetch=1 \
+    vendor.iop.enable_uxe=1 \
+    vendor.iop.enable_prefetch_ofr=1 \
+    vendor.perf.iop_v3.enable=1 \
+    ro.vendor.at_library=libqti-at.so \
+    persist.vendor.qti.games.gt.prof=1
+
 
 # Permissions
 PRODUCT_COPY_FILES += \
