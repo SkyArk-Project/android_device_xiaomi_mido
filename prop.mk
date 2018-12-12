@@ -2,6 +2,20 @@
 # system.prop for mido
 #
 
+
+#LMKD props
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.lmk.low=1001 \
+ro.lmk.medium=800 \
+ro.lmk.critical=0 \
+ro.lmk.critical_upgrade=false \
+ro.lmk.upgrade_pressure=100 \
+ro.lmk.downgrade_pressure=100 \
+ro.lmk.kill_heaviest_task=true 
+
+#FIFO UI
+sys.use_fifo_ui=1
+
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat-filter=speed \
