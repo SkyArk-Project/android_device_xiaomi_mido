@@ -21,12 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Syberia stuff.
+$(call inherit-product, vendor/syberia/common.mk)
+
+#Boot Animation res
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := lineage_mido
+PRODUCT_NAME := syberia_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
@@ -40,3 +43,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/tissot/tissot_sprout:9/PKQ1.180917.001/V10.0.2.0.PDHMIFK:user/release-keys"
+
+# Build Type
+SYBERIA_BUILD_TYPE := OFFICIAL
